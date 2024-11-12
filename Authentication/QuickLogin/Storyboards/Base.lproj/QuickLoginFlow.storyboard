@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fn-1b-xtI">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Login View Controller-->
+        <scene sceneID="0Xv-hZ-04a">
+            <objects>
+                <viewController storyboardIdentifier="QuickLoginViewController" id="7fn-1b-xtI" customClass="QuickLoginViewController" customModule="Authentication" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7E-8M-gr4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="V0Q-QL-iKM"/>
+                    </view>
+                    <connections>
+                        <segue destination="onh-vv-h88" kind="presentation" identifier="PinDelaySegue" id="SYe-cz-Kp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6YP-ue-QVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="181"/>
+        </scene>
+        <!--Pin Delay View Controller-->
+        <scene sceneID="niE-26-1ei">
+            <objects>
+                <viewController storyboardIdentifier="storyboardPinDelayVC" id="onh-vv-h88" customClass="PinDelayViewController" customModule="Authentication" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6se-I1-fXG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-U1-C5Q">
+                                <rect key="frame" x="129" y="296.5" width="118" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="53"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOF-t9-YtZ">
+                                <rect key="frame" x="20" y="301.5" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swb-gq-SaT">
+                                <rect key="frame" x="119" y="495" width="137" height="30"/>
+                                <state key="normal" title="Login as Other User">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="otherUserButton:" destination="onh-vv-h88" eventType="touchUpInside" id="vb4-cb-DFd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag6-cS-cGe">
+                                <rect key="frame" x="125.5" y="567" width="124" height="30"/>
+                                <state key="normal" title="Reset Quick Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetQuickLinkButton:" destination="onh-vv-h88" eventType="touchUpInside" id="HZS-Hf-P9C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Too many failed attempts. Please wait" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Qj-y6x">
+                                <rect key="frame" x="45" y="247" width="287.5" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="i8R-FY-Jsy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Warning_720" translatesAutoresizingMaskIntoConstraints="NO" id="rCa-yk-8QD">
+                                <rect key="frame" x="155.5" y="163" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="9py-yf-dhv"/>
+                                    <constraint firstAttribute="height" constant="64" id="IOf-n7-ZVl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ag6-cS-cGe" firstAttribute="centerX" secondItem="mR1-Eb-ujZ" secondAttribute="centerX" id="0Wz-pb-3cL"/>
+                            <constraint firstItem="Mds-U1-C5Q" firstAttribute="top" secondItem="TeG-Qj-y6x" secondAttribute="bottom" constant="2.3333333333332575" id="0ur-9o-FqV"/>
+                            <constraint firstItem="Swb-gq-SaT" firstAttribute="centerX" secondItem="mR1-Eb-ujZ" secondAttribute="centerX" id="2jM-GQ-h0P"/>
+                            <constraint firstItem="rCa-yk-8QD" firstAttribute="centerX" secondItem="mR1-Eb-ujZ" secondAttribute="centerX" id="71N-uI-WuA"/>
+                            <constraint firstItem="mR1-Eb-ujZ" firstAttribute="bottom" secondItem="Ag6-cS-cGe" secondAttribute="bottom" constant="50" id="7cO-4F-WhP"/>
+                            <constraint firstItem="mR1-Eb-ujZ" firstAttribute="trailing" secondItem="Mds-U1-C5Q" secondAttribute="trailing" constant="128" id="GV1-oh-yGn"/>
+                            <constraint firstItem="Mds-U1-C5Q" firstAttribute="leading" secondItem="mR1-Eb-ujZ" secondAttribute="leading" constant="129" id="M4z-5L-0f0"/>
+                            <constraint firstItem="rCa-yk-8QD" firstAttribute="top" secondItem="mR1-Eb-ujZ" secondAttribute="top" constant="163" id="P75-IW-sJ0"/>
+                            <constraint firstItem="mR1-Eb-ujZ" firstAttribute="trailing" secondItem="HOF-t9-YtZ" secondAttribute="trailing" constant="20" id="Q7a-RD-4vA"/>
+                            <constraint firstItem="HOF-t9-YtZ" firstAttribute="leading" secondItem="mR1-Eb-ujZ" secondAttribute="leading" constant="20" id="U2O-iS-8hv"/>
+                            <constraint firstItem="HOF-t9-YtZ" firstAttribute="top" secondItem="Mds-U1-C5Q" secondAttribute="bottom" constant="5" id="XTK-nJ-Pka"/>
+                            <constraint firstItem="TeG-Qj-y6x" firstAttribute="top" secondItem="rCa-yk-8QD" secondAttribute="bottom" constant="20" id="adi-6t-NUv"/>
+                            <constraint firstItem="Ag6-cS-cGe" firstAttribute="top" secondItem="Swb-gq-SaT" secondAttribute="bottom" constant="42" id="di2-Ty-w6E"/>
+                            <constraint firstItem="mR1-Eb-ujZ" firstAttribute="trailing" secondItem="TeG-Qj-y6x" secondAttribute="trailing" constant="42.333333333333314" id="iE9-n9-juH"/>
+                            <constraint firstItem="TeG-Qj-y6x" firstAttribute="leading" secondItem="mR1-Eb-ujZ" secondAttribute="leading" constant="45" id="jCV-Qt-UX2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mR1-Eb-ujZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="delayTimerText" destination="Mds-U1-C5Q" id="MRq-JN-fdJ"/>
+                        <outlet property="otherUserButton" destination="Swb-gq-SaT" id="J4P-0q-PwN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lqb-tF-stM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560.79999999999995" y="179.46026986506749"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Warning_720" width="720" height="720"/>
+    </resources>
+</document>

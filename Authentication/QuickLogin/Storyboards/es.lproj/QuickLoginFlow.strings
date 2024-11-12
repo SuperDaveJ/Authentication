@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Reset Quick Login"; ObjectID = "Ag6-cS-cGe"; */
+"Ag6-cS-cGe.normalTitle" = "Restablecer Inicio de Sesión Rápida";
+
+/* Class = "UILabel"; text = "Login as Other User"; ObjectID = "D10-dj-HF6"; */
+"D10-dj-HF6.text" = "Iniciar Sesión usando Otro Usuario";
+
+/* Class = "UILabel"; text = "and try again."; ObjectID = "HOF-t9-YtZ"; */
+"HOF-t9-YtZ.text" = "e inténtelo de nuevo.";
+
+/* Class = "UILabel"; text = "Reset Quick Login"; ObjectID = "MLk-S2-2P5"; */
+"MLk-S2-2P5.text" = "Restablecer Inicio de Sesión Rápida";
+
+/* Class = "UIButton"; normalTitle = "Login as Other User"; ObjectID = "Swb-gq-SaT"; */
+"Swb-gq-SaT.normalTitle" = "Iniciar Sesión usando Otro Usuario";
+
+/* Class = "UILabel"; text = "Too many failed attempts. Please wait"; ObjectID = "TeG-Qj-y6x"; */
+"TeG-Qj-y6x.text" = "Demasiados intentos fallidos. Por favor, espere";
+
+/* Class = "UINavigationItem"; title = "Quick Login Options"; ObjectID = "hSq-Wl-Afo"; */
+"hSq-Wl-Afo.title" = "Opciones de Inicio de Sesión Rápida";
+
+/* Class = "UILabel"; text = "Reset App Data"; ObjectID = "mio-s6-wp5"; */
+"mio-s6-wp5.text" = "Restablecer Datos de la Aplicación";
+
+/* Class = "UILabel"; text = "Automatic Authentication"; ObjectID = "nao-DV-R1G"; */
+"nao-DV-R1G.text" = "Autenticación Automática";
